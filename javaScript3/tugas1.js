@@ -13,20 +13,20 @@ const cekHariKerja = (day) => {
         },3000)
     })
 }
-// // nama variable yang bernama cekhari ini akan menghubungkan function dengan menggunakan async yang memiliki parameter day
-// const cekhari = async (day) => {
-//     try {
-//         // variabel result akan memproses sambil menunggu hasil dari promise dari cekHariKerja dengan menggunakan await
-//         const result = await cekHariKerja(day);
-//         // jika value adalah hari kerja, maka akan mengeluarkan output seperti ini
-//         console.log(result + " adalah hari kerja");
-//     } catch (error) {
-//          // jika value adalah bukan hari kerja, maka akan mengeluarkan output seperti ini
-//         console.log(error.message);
-//     }
-// };
+// nama variable yang bernama cekhari ini akan menghubungkan function dengan menggunakan async yang memiliki parameter day
+const cekhari = async (day) => {
+    try {
+        // variabel result akan memproses sambil menunggu hasil dari promise dari cekHariKerja dengan menggunakan await
+        const result = await cekHariKerja(day);
+        // jika value adalah hari kerja, maka akan mengeluarkan output seperti ini
+        console.log(result + " adalah hari kerja");
+    } catch (error) {
+         // jika value adalah bukan hari kerja, maka akan mengeluarkan output seperti ini
+        console.log(error.message);
+    }
+};
 
-// cekhari('senin');// tempat untuk menampung nilai / value dari pengecekan
+cekhari('senin');// tempat untuk menampung nilai / value dari pengecekan
 
 // ============================================================
 
