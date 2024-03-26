@@ -1,13 +1,13 @@
-const dataDB =  'https://jsonplaceholder.typicode.com/users';
+const dataBackend =  'https://jsonplaceholder.typicode.com/users';
 
-function fetchDB(url){
+function backend(url){
     return fetch(url).then(data => data.json());
 }
 
 async function print() {
     try{
         console.log("Please wait...");
-        const allData = await fetchDB(dataDB)
+        const allData = await backend(dataBackend)
         allData.forEach(person => {
             console.log(person.name);
         });
